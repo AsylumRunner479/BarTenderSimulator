@@ -7,15 +7,15 @@ public class VrRig : MonoBehaviour
     public static VrRig instance = null;
 
     public Transform Headset { get { return headset; } }
-    public Transform LeftController { get { return leftController; } }
-    public Transform RightController { get { return rightController; } }
+    public VrController LeftController { get { return leftController; } }
+    public VrController RightController { get { return rightController; } }
 
     [SerializeField]
     private Transform headset;
     [SerializeField]
-    private Transform leftController;
+    private VrController leftController;
     [SerializeField]
-    private Transform rightController;
+    private VrController rightController;
     private void Awake()
     {
         if (instance == null)
@@ -27,6 +27,9 @@ public class VrRig : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        leftController.Setup();
+        rightController.Setup();
     }
 
 
