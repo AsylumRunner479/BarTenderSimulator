@@ -26,14 +26,15 @@ public class Mug : MonoBehaviour
     }
     private void Slosh()
     {
-        Quaternion inverseRotation = Quaternion.Inverse(transform.localRotation);
+        //Quaternion inverseRotation = Quaternion.Inverse(transform.localRotation);
 
-        Vector3 finalRotation = Quaternion.RotateTowards(mLiquid.transform.localRotation, inverseRotation, mSloshSpeed * Time.deltaTime).eulerAngles;
+        //Vector3 finalRotation = Quaternion.RotateTowards(mLiquid.transform.localRotation, inverseRotation, mSloshSpeed * Time.deltaTime).eulerAngles;
 
-        finalRotation.x = ClampRotationValue(finalRotation.x, difference);
-        finalRotation.z = ClampRotationValue(finalRotation.z, difference);
+        //finalRotation.x = ClampRotationValue(finalRotation.x, difference);
+        //finalRotation.z = ClampRotationValue(finalRotation.z, difference);
 
-        mLiquid.transform.localEulerAngles = finalRotation;
+        float y = mLiquid.transform.localEulerAngles.y;
+        mLiquid.transform.localEulerAngles = new Vector3(Mathf.Sin(Time.deltaTime * mSloshSpeed), y, 0);
     }
    
 

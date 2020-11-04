@@ -8,6 +8,7 @@ public class VrControllerInput : MonoBehaviour
 {
     [System.Serializable]
     public class InputEvent : UnityEvent<InputEventArgs> { }
+    public VrController Controller { get { return controller; } }
     [SerializeField]
     private SteamVR_Action_Boolean grab;
     [SerializeField]
