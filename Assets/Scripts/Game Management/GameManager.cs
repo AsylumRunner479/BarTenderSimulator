@@ -29,23 +29,26 @@ namespace Underdrunk.GameManagement
         [SerializeField] Transform orderDisplayPanel;
         [SerializeField] GameObject orderButtonPrefab;
         public List<OrderBehaviours> currentOrders = new List<OrderBehaviours>();
-        #endregion
-
-        #region Service
-        [SerializeField] GameObject serviceArea;
+        public float orderDelay;
+        public float orderDelayMin;
+        public float orderDelayMax;
+        public float orderDelayModifier;
+        public float previousOrdertimeStamp;
         #endregion
 
         #region Game Management
         public int playerScore;
         #endregion
 
-        void AddOrder()
+        void AddRandomOrder()
         {
             OrderBehaviours newOrder = Instantiate(orderButtonPrefab, orderDisplayPanel).GetComponent<OrderBehaviours>();
             currentOrders.Add(newOrder);
+            previousOrdertimeStamp = Time.time;
+            orderDelay = Random.Range(orderDelayMin, orderDelayMax);
         }
 
-        void CheckOrder(string servedOrderType)
+        public void CheckOrder(string servedOrderType)
         {
             //check each order that is currently active
             foreach (OrderBehaviours order in currentOrders)
@@ -63,16 +66,16 @@ namespace Underdrunk.GameManagement
             }
         }
 
+        private void Start()
+        {
+            orderDelay = Random.Range(orderDelayMin, orderDelayMax);
+        }
+
         private void Update()
         {
-            if(Input.GetKeyDown(KeyCode.A))
+            if (Time.time - previousOrdertimeStamp > orderDelay)
             {
-                AddOrder();
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                OrderBehaviours tempOrder = currentOrders[Random.Range(0, currentOrders.Count - 1)];
-                RemoveOrder(tempOrder);
+                AddRandomOrder();
             }
         }
     }
