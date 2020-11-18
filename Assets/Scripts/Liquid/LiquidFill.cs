@@ -7,6 +7,8 @@ public class LiquidFill : MonoBehaviour
    
     public GameObject MugTop, MugBottom, self;
     public float fillAmount, maxfill = 1000;
+    public bool full;
+    public string LiquidType;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,10 @@ public class LiquidFill : MonoBehaviour
     
     public void FillLiquid()
     {
+        if (fillAmount >= maxfill)
+        {
+            full = true;
+        }
         if (fillAmount <= maxfill)
         {
             fillAmount += 1;

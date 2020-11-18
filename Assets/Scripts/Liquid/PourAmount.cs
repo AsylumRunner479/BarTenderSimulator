@@ -10,6 +10,7 @@ public class PourAmount : MonoBehaviour
     public LiquidFill liquid;
     public MeshRenderer Mesh;
     public Material material;
+    public string LiquidType;
     public void ChangePour(float tap)
     {
         if (tap != PourSpeed)
@@ -44,6 +45,7 @@ public class PourAmount : MonoBehaviour
         Mesh = other.GetComponent<MeshRenderer>();
         
         Mesh.material = material;
+        liquid.LiquidType = LiquidType;
     }
     private void Update()
     {
