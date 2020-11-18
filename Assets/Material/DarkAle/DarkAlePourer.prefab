@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2005233540589899063}
   - component: {fileID: 2005233540589899060}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: DarkAlePourer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,8 @@ MonoBehaviour:
   TapOn: 0
   liquid: {fileID: 0}
   Mesh: {fileID: 0}
-  material: {fileID: 2100000, guid: fac101b12449e5548b9d88ef147c1f21, type: 2}
+  material: {fileID: 2100000, guid: ae11cf3a9818b974f8b5dd9aa9c4c603, type: 2}
+  LiquidType: DarkAle
 --- !u!198 &2005233540589899063
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -243,7 +244,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.087086126, g: 0.7955168, b: 0.9716981, a: 1}
+      maxColor: {r: 0.03773582, g: 0.036056533, b: 0.032573845, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -886,7 +887,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4730,8 +4731,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c9d5923ed78059543b790de5a5a9edb6, type: 2}
-  - {fileID: 2100000, guid: 4a82e971c86e61b40a0c18a599eac3bd, type: 2}
+  - {fileID: 2100000, guid: 94454da04fe45dc47981395b3b216b7a, type: 2}
+  - {fileID: 2100000, guid: e9fab311c9ce9494697ad1300c7fdfa4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
