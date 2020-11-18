@@ -9,16 +9,16 @@ namespace Underdrunk.GameManagement
     {
         public Text orderText;
         public Text timeText;
-        public List<string> possibleOrders = new List<string>();
-        public string order;
+        public List<string> possibleOrderTypes = new List<string>();
+        public string orderType;
         float orderTimeStamp;
 
 
         private void Start()
         {
             orderTimeStamp = Time.time;
-            order = possibleOrders[Random.Range(0, possibleOrders.Count - 1)];
-            orderText.text = "Order: " + order;
+            orderType = possibleOrderTypes[Random.Range(0, possibleOrderTypes.Count - 1)];
+            orderText.text = "Order: " + orderType;
             if (timeText)
             {
                 timeText.text = "Time: " + 0;

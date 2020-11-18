@@ -329,11 +329,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderText: {fileID: 1443797600997330809}
   timeText: {fileID: 1443797602052221863}
-  possibleOrders:
+  possibleOrderTypes:
   - beer 1
   - beer 2
   - beer 3
-  order: 
+  orderType: 
 --- !u!114 &8397135466058332048
 MonoBehaviour:
   m_ObjectHideFlags: 0
