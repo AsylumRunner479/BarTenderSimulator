@@ -7,7 +7,9 @@ public class PourAmount : MonoBehaviour
     public ParticleSystem particle;
     public float PourSpeed, maxPourSpeed, currentPour;
     public bool TapOn;
-
+    public LiquidFill liquid;
+    public MeshRenderer Mesh;
+    public Material material;
     public void ChangePour(float tap)
     {
         if (tap != PourSpeed)
@@ -25,6 +27,23 @@ public class PourAmount : MonoBehaviour
                 PourSpeed = maxPourSpeed;
             }
         }
+    }
+    private void OnParticleCollision(GameObject other)
+    {
+        liquid = other.GetComponent<LiquidFill>();
+        if (liquid != null)
+        {
+            liquid.FillLiquid();
+        }
+        if (liquid.fillAmount >= liquid.maxfill)
+        {
+            var bouncy = particle.collision;
+            bouncy.bounce = 1;
+            bouncy.dampen = 0;
+        }
+        Mesh = other.GetComponent<MeshRenderer>();
+        
+        Mesh.material = material;
     }
     private void Update()
     {
