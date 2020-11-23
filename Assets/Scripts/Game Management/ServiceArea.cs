@@ -13,7 +13,7 @@ namespace Underdrunk.GameManagement
             OrderBehaviours servedOrder = collision.gameObject.GetComponent<OrderBehaviours>();
             if (servedOrder)
             {
-
+                gameManager.CheckOrder(servedOrder.orderType);
             }
         }
     }

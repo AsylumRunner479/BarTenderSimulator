@@ -8939,6 +8939,7 @@ GameObject:
   - component: {fileID: 5612500142922852853}
   - component: {fileID: 5612500142922852858}
   - component: {fileID: 4898295736423761206}
+  - component: {fileID: 7398096116206687381}
   m_Layer: 0
   m_Name: Mug
   m_TagString: Untagged
@@ -32151,6 +32152,25 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &7398096116206687381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5612500142922852859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e46e7810be06254cbbd3c9aa322714e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MugTop: {fileID: 5612500143464618754}
+  MugBottom: {fileID: 5612500142699605626}
+  self: {fileID: 0}
+  fillAmount: 0
+  maxfill: 1000
+  full: 0
+  LiquidType: 
 --- !u!1 &5612500143265171213
 GameObject:
   m_ObjectHideFlags: 0
