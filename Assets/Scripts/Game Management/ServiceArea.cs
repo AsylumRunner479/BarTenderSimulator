@@ -11,8 +11,9 @@ namespace Underdrunk.GameManagement
         private void OnCollisionEnter(Collision collision)
         {
             OrderBehaviours servedOrder = collision.gameObject.GetComponent<OrderBehaviours>();
-            if (servedOrder)
+            if (servedOrder != null)
             {
+                Debug.Log("served order");
                 gameManager.CheckOrder(servedOrder.orderType);
             }
         }

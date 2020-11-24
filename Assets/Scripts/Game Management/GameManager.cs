@@ -50,11 +50,13 @@ namespace Underdrunk.GameManagement
 
         public void CheckOrder(string servedOrderType)
         {
+            Debug.Log("check served order");
             //check each order that is currently active
             foreach (OrderBehaviours order in currentOrders)
             {
                 if(order.orderType == servedOrderType)//if the 
                 {
+                    Debug.Log("served order found");
                     //remove reference to button in the list
                     currentOrders.Remove(order);
                     //destroy the button that has the order
@@ -68,7 +70,7 @@ namespace Underdrunk.GameManagement
 
         private void Start()
         {
-            orderDelay = Random.Range(orderDelayMin, orderDelayMax);
+            //orderDelay = Random.Range(orderDelayMin, orderDelayMax);
         }
 
         private void Update()

@@ -331,9 +331,7 @@ MonoBehaviour:
   timeText: {fileID: 1443797602052221863}
   possibleOrderTypes:
   - beer 1
-  - beer 2
-  - beer 3
-  orderType: 
+  orderType: beer 1
 --- !u!114 &8397135466058332048
 MonoBehaviour:
   m_ObjectHideFlags: 0

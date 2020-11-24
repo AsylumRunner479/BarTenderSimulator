@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.SceneManagement;
 
 public class VrHelper : MonoBehaviour
 {
@@ -39,5 +40,10 @@ public class VrHelper : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void Start()
+    {
+        
     }
 }
