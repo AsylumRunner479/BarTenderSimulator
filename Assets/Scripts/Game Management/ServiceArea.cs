@@ -10,6 +10,7 @@ namespace Underdrunk.GameManagement
 
         private void OnCollisionEnter(Collision collision)
         {
+            Debug.Log("served order");
             OrderBehaviours servedOrder = collision.gameObject.GetComponent<OrderBehaviours>();
             if (servedOrder != null)
             {
