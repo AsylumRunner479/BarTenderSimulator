@@ -32166,7 +32166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MugTop: {fileID: 5612500143464618754}
   MugBottom: {fileID: 5612500142699605626}
-  self: {fileID: 0}
+  self: {fileID: 5612500143265171213}
   fillAmount: 0
   maxfill: 1000
   full: 0
