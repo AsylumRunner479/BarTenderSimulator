@@ -10,6 +10,20 @@ public class VrHelper : MonoBehaviour
     public GameObject computerCamera;
     public GameObject vrCamera;
 
+    public static bool isPresent()
+    {
+        var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
+        SubsystemManager.GetInstances<XRDisplaySubsystem>(xrDisplaySubsystems);
+        foreach (var xrDisplay in xrDisplaySubsystems)
+        {
+            if (xrDisplay.running)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void SetEnabled(bool _enabled)
     {
         displays.Clear();
@@ -44,9 +58,9 @@ public class VrHelper : MonoBehaviour
         return false;
     }
 
-    private void Start()
+    private void Awake()
     {
-        if(IsEnabled())
+        if(isPresent())
         {
             vrCamera.SetActive(true);
         }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Order
   - Time
+  - projectile
+  - FxTemporaire
+  - ServiceArea
   layers:
   - Default
   - TransparentFX

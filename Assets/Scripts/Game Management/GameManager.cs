@@ -6,24 +6,22 @@ namespace Underdrunk.GameManagement
 {
     public class GameManager : MonoBehaviour
     {
-        //#region Singleton
-        //GameManager singleton;
-        //GameManager Singleton
-        //{
-        //    get
-        //    {
-        //        if(singleton == null)
-        //        {
-        //            singleton = this;
-        //        }
-        //        else
-        //        {
-        //            Destroy(gameObject);
-        //        }
-        //        return singleton;
-        //    }
-        //}
-        //#endregion
+        #region Singleton
+        public static GameManager singleton;
+        private void Awake()
+        {
+            if(singleton == null)
+            {
+                singleton = this;
+            }
+            else if(singleton != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+        }
+
+        #endregion
 
         #region Orders
         [SerializeField] Transform orderDisplayPanel;
@@ -38,6 +36,7 @@ namespace Underdrunk.GameManagement
 
         #region Game Management
         public int playerScore;
+        float gameStartTimeStamp;
         #endregion
 
         void AddRandomOrder()
@@ -70,7 +69,8 @@ namespace Underdrunk.GameManagement
 
         private void Start()
         {
-            //orderDelay = Random.Range(orderDelayMin, orderDelayMax);
+            orderDelay = Random.Range(orderDelayMin, orderDelayMax);
+            gameStartTimeStamp = Time.time;
         }
 
         private void Update()
