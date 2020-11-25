@@ -6,11 +6,13 @@ namespace Underdrunk.GameManagement
 {
     public class GameManagerInitializer : MonoBehaviour
     {
-        public void StartGame()
+        public float initialDelay;
+        private void Update()
         {
-            GameManager.singleton.enabled = true;
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                GameManager.singleton.enabled = true;
+            }
         }
-
-
     }
 }
