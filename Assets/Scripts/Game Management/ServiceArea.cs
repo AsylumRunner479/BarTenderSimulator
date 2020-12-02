@@ -18,5 +18,16 @@ namespace Underdrunk.GameManagement
                 gameManager.CheckOrder(servedOrder.orderType);
             }
         }
+
+        public void ServeButtonFunction()
+        {
+            GameObject[] mugs = GameObject.FindGameObjectsWithTag("Mug");
+
+            foreach(GameObject mug in mugs)
+            {
+                GameManager.singleton.CheckOrder(mug.GetComponent<LiquidFill>().LiquidType);
+                Destroy(mug);
+            }
+        }
     }
 }

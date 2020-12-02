@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 public class VrHelper : MonoBehaviour
 {
     private static List<XRDisplaySubsystem> displays = new List<XRDisplaySubsystem>();
-    public GameObject computerCamera;
-    public GameObject vrCamera;
-
+    public int pcScene = 1, vrScene = 2;
     public static bool isPresent()
     {
         var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
@@ -42,6 +40,7 @@ public class VrHelper : MonoBehaviour
         }
     }
 
+
     public static bool IsEnabled()
     {
         displays.Clear();
@@ -57,16 +56,15 @@ public class VrHelper : MonoBehaviour
 
         return false;
     }
-
-    private void Awake()
+    public void ButtonFunction()
     {
-        if(isPresent())
+        if (isPresent())
         {
-            vrCamera.SetActive(true);
+            SceneManager.LoadScene(vrScene);
         }
         else
         {
-            computerCamera.SetActive(true);
+            SceneManager.LoadScene(pcScene);
         }
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - ServiceArea
+  - Mug
   layers:
   - Default
   - TransparentFX

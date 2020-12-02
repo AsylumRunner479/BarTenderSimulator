@@ -4,4 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: af84eb15581cf7545ae540d8171fc487
+  - enabled: 1
+    path: Assets/Scenes/BarScenePC.unity
+    guid: 6534a0ef7d09fbc499f0486d640d9a96
+  - enabled: 1
+    path: Assets/Scenes/BarSceneVR.unity
+    guid: 2b03798519d95944a8040cd84fd810f7
+  m_configObjects: {}
