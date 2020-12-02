@@ -7,7 +7,8 @@ namespace Underdrunk.GameManagement
     public class MugBehavior : MonoBehaviour
     {
         LiquidFill liquidFill;
-        float gravity = 10;
+        float gravity = 2;
+        bool falling = true;
         private void OnTriggerEnter(Collider other)
         {
             if(other.transform.CompareTag("ServiceArea"))
@@ -15,14 +16,26 @@ namespace Underdrunk.GameManagement
                 GameManager.singleton.CheckOrder(liquidFill.LiquidType);
             }
         }
+        private void OnCollisionEnter(Collision collision)
+        {
+            falling = false;
+        }
+        private void OnCollisionExit(Collision collision)
+        {
+            falling = true;
+        }
         private void Start()
         {
             liquidFill = GetComponent<LiquidFill>();
         }
         private void Update()
         {
-            Vector3 pos = transform.position;
-            pos.y -= (gravity * Time.deltaTime);
+            if (falling)
+            {
+                Vector3 pos = transform.position;
+                pos.y -= (gravity * Time.deltaTime);
+                transform.position = pos;
+            }
         }
     }
 }

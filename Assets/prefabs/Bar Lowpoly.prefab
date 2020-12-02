@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5281301796491095792}
   - component: {fileID: 289178250507149393}
   - component: {fileID: 6703486246572120954}
+  - component: {fileID: 9174935218636353658}
   m_Layer: 0
   m_Name: Bar Lowpoly
   m_TagString: Untagged
@@ -94,3 +95,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 466695624268538348, guid: c7613f12581bc224095e3ce72d6d24bd, type: 3}
+--- !u!65 &9174935218636353658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703486246572120959}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1408636, y: 0.022412227, z: 0.020411018}
+  m_Center: {x: -0.0019046401, y: -0.0018440187, z: -0.000010836125}

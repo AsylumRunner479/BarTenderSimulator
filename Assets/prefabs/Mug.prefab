@@ -8938,10 +8938,10 @@ GameObject:
   - component: {fileID: 5612500142922852852}
   - component: {fileID: 5612500142922852853}
   - component: {fileID: 5612500142922852858}
-  - component: {fileID: 4898295736423761206}
   - component: {fileID: 7398096116206687381}
-  - component: {fileID: 4649529868138311417}
   - component: {fileID: 5354767966756064759}
+  - component: {fileID: 2682683087678939576}
+  - component: {fileID: 6089452045756241482}
   m_Layer: 0
   m_Name: Mug
   m_TagString: Untagged
@@ -32099,61 +32099,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &4898295736423761206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5612500142922852859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activateActionSetOnAttach:
-    actionSetPath: 
-  hideHandOnAttach: 1
-  hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 0
-  handAnimationOnPickup: 0
-  setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 1
-  attachEaseIn: 0
-  snapAttachEaseInCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  snapAttachEaseInTime: 0.15
-  snapAttachEaseInCompleted: 0
-  skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
-  highlightOnHover: 1
-  hideHighlight: []
-  hoverPriority: 0
 --- !u!114 &7398096116206687381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32173,7 +32121,19 @@ MonoBehaviour:
   maxfill: 1000
   full: 0
   LiquidType: 
---- !u!54 &4649529868138311417
+--- !u!114 &5354767966756064759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5612500142922852859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3c915c32cec79408ff96050bbe133c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &2682683087678939576
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32189,7 +32149,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5354767966756064759
+--- !u!114 &6089452045756241482
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32198,9 +32158,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 5612500142922852859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec3c915c32cec79408ff96050bbe133c, type: 3}
+  m_Script: {fileID: 11500000, guid: 33bc031f4baafdc46aeacaf86efa0931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabable: 1
+  isTouchable: 0
+  isUsable: 0
+  allowedSource: 0
+  OnGrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNotGrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTouched:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNotTouched:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUsed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnNotUsed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5612500143265171213
 GameObject:
   m_ObjectHideFlags: 0
