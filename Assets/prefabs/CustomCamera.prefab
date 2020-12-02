@@ -763,6 +763,7 @@ GameObject:
   - component: {fileID: 6376151693754359152}
   - component: {fileID: 5408301537638016488}
   - component: {fileID: 303946012}
+  - component: {fileID: 6015093947438175742}
   m_Layer: 0
   m_Name: VrRightController
   m_TagString: Untagged
@@ -973,6 +974,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   notgrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6015093947438175742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279840460289289991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06db74bf2aeed6a4fba828da0b4ef7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  use:
+    m_PersistentCalls:
+      m_Calls: []
+  notUsed:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3279840460424345223
@@ -1981,6 +2000,7 @@ GameObject:
   - component: {fileID: 7646666406496849707}
   - component: {fileID: 7979887475823802058}
   - component: {fileID: 577178128}
+  - component: {fileID: 1808399746133755715}
   m_Layer: 0
   m_Name: VrLeftController
   m_TagString: Untagged
@@ -2191,6 +2211,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   notgrabbed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1808399746133755715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279840461710489796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06db74bf2aeed6a4fba828da0b4ef7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  use:
+    m_PersistentCalls:
+      m_Calls: []
+  notUsed:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3279840461751877401

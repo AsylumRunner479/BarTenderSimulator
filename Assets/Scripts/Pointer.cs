@@ -13,6 +13,7 @@ public class Pointer : MonoBehaviour
     [SerializeField]
     private SteamVR_Input_Sources source;
     private float maxPointerLength;
+    [SerializeField]
     private LayerMask PointerLayers;
     [Header("Rendering")]
     [SerializeField]

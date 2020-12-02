@@ -20,6 +20,12 @@ namespace Underdrunk.GameManagement
         public Material material;
         //what is the name of the liquid coming out of particle system
         public string LiquidType;
+
+        public void ToggleTapOn()
+        {
+            TapOn = !TapOn;
+        }
+
         public void ChangePour(float tap)
         {
             //increase the tap speed up to a limit and decrease it till it hits 0

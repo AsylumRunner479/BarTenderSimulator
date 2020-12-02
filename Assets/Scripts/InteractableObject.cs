@@ -57,8 +57,10 @@ public class InteractableObject : MonoBehaviour
     }
     public void OnObjectUsed(VrController _controller)
     {
+        Debug.Log("use attempted");
         if (isUsable && (_controller.InputSource == allowedSource || allowedSource == SteamVR_Input_Sources.Any))
-        {
+        {            
+            Debug.Log("use done");
             OnUsed.Invoke(GenerateArgs(_controller));
         }
     }
