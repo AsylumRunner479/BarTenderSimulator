@@ -3692,7 +3692,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &5612500142855261490
@@ -8922,7 +8922,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &5612500142922852859
@@ -32194,7 +32194,6 @@ GameObject:
   - component: {fileID: 5612500143265171212}
   - component: {fileID: 5612500143265171208}
   - component: {fileID: 5612500143265171209}
-  - component: {fileID: 5612500143265171211}
   - component: {fileID: 5612500143265171214}
   - component: {fileID: 5612500143265171215}
   m_Layer: 0
@@ -32265,25 +32264,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5612500143265171211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5612500143265171213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e46e7810be06254cbbd3c9aa322714e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MugTop: {fileID: 5612500143464618754}
-  MugBottom: {fileID: 5612500142699605626}
-  self: {fileID: 5612500143265171213}
-  fillAmount: 0
-  maxfill: 1000
-  full: 0
-  LiquidType: 
 --- !u!114 &5612500143265171214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35816,7 +35796,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &5612500143464618754
@@ -39432,6 +39412,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}

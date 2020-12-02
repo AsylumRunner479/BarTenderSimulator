@@ -111,8 +111,9 @@ GameObject:
   - component: {fileID: 5186468775034553131}
   - component: {fileID: 5186468775034553132}
   - component: {fileID: 5186468775034553133}
+  - component: {fileID: 6406548375731366932}
   m_Layer: 0
-  m_Name: Order Display and Game Manager Object
+  m_Name: Order Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,6 +194,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6406548375731366932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5186468775034553134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e701ae3ed7c24ef4393d83e27bd57afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderDisplayPanel: {fileID: 5186468776069538959}
+  orderButtonPrefab: {fileID: 1443797601037006572, guid: 372385dc293b71c478a0eecf78b9fab0,
+    type: 3}
+  currentOrders: []
+  orderDelay: 0
+  orderDelayMin: 3
+  orderDelayMax: 10
+  orderDelayModifier: 0.9
+  previousOrdertimeStamp: 0
+  playerScore: 0
 --- !u!1 &5186468776069538944
 GameObject:
   m_ObjectHideFlags: 0
