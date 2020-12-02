@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Underdrunk.GameManagement
 {
@@ -36,7 +37,14 @@ namespace Underdrunk.GameManagement
 
         #region Game Management
         public int playerScore;
+        int timeLimit = 60;
         float gameStartTimeStamp;
+        bool gameRunning = true;
+        #endregion
+
+        #region UI
+        public Text timeDisplay, endScoreText;
+        public GameObject endGameDisplayPanel;
         #endregion
 
         void AddRandomOrder()
@@ -67,17 +75,54 @@ namespace Underdrunk.GameManagement
             }
         }
 
+        void Quit()
+        {
+            Debug.Log("quit after time");
+
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+            Application.Quit();
+        }
+
+        void EndGame()
+        {
+            Debug.Log("Game Over");
+            gameRunning = false;
+            foreach (var order in currentOrders)
+            {
+                Destroy(order.gameObject);
+            }
+            currentOrders.Clear();
+            endScoreText.text = playerScore.ToString();
+            orderDisplayPanel.gameObject.SetActive(false);
+            endGameDisplayPanel.SetActive(true);
+            Invoke("Quit", 5);
+        }
+
         private void Start()
         {
+            orderDelayMin = 3;
+            orderDelayMax = 5;
             orderDelay = Random.Range(orderDelayMin, orderDelayMax);
+            gameRunning = true;
             gameStartTimeStamp = Time.time;
         }
 
         private void Update()
         {
-            if (Time.time - previousOrdertimeStamp > orderDelay)
+            int gameTime = (int)(timeLimit - (Time.time - gameStartTimeStamp));
+            if (gameRunning)
             {
-                AddRandomOrder();
+                timeDisplay.text = gameTime.ToString();
+                if (gameTime <= 0)
+                {
+                    EndGame();
+                }
+                if (Time.time - previousOrdertimeStamp > orderDelay)
+                {
+                    AddRandomOrder();
+                }
             }
         }
     }

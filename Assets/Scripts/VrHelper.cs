@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class VrHelper : MonoBehaviour
 {
     private static List<XRDisplaySubsystem> displays = new List<XRDisplaySubsystem>();
-    public int pcScene = 1, vrScene = 2;
     public static bool isPresent()
     {
         var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
@@ -22,7 +21,7 @@ public class VrHelper : MonoBehaviour
         return false;
     }
 
-    public static void SetEnabled(bool _enabled)
+    public void SetEnabled(bool _enabled)
     {
         displays.Clear();
         SubsystemManager.GetInstances(displays);
@@ -56,15 +55,8 @@ public class VrHelper : MonoBehaviour
 
         return false;
     }
-    public void ButtonFunction()
+    public void ButtonFunction(int index)
     {
-        if (isPresent())
-        {
-            SceneManager.LoadScene(vrScene);
-        }
-        else
-        {
-            SceneManager.LoadScene(pcScene);
-        }
+        SceneManager.LoadScene(index);
     }
 }
